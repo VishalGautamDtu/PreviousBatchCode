@@ -1,0 +1,116 @@
+﻿<Window x:Class="Front_Running.TraderRegister"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Front_Running"
+        mc:Ignorable="d"
+        Title="TraderRegister" Height="500" Width="600">
+    <Window.Background>
+        <ImageBrush ImageSource="login_background.jpg"/>
+    </Window.Background>
+    <Grid  Height="350" Width="525" >
+        <!--<Grid.Background>
+            <ImageBrush ImageSource="citiBG2.jpg"  />
+
+        </Grid.Background>-->
+
+
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" Name="textBlockHeading" Text="Registration:" Foreground="AntiqueWhite" VerticalAlignment="Top" Width="110"  FontSize="17" FontStretch="ExtraCondensed"/>
+
+        <!--Button as a Link button using style-->
+
+        <Button Margin="451,0,12,288" Foreground="AntiqueWhite" Content="Login" Cursor="Hand" Click="Login_Click" Height="57" VerticalAlignment="Bottom">
+
+            <Button.Template>
+
+                <ControlTemplate TargetType="Button">
+
+                    <TextBlock TextDecorations="Underline">
+
+                    <ContentPresenter />
+
+                    </TextBlock>
+
+                </ControlTemplate>
+
+            </Button.Template>
+
+            <Button.Style>
+
+                <Style TargetType="Button">
+
+                    <Setter Property="Foreground" Value="Navy" />
+
+                    <Style.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="true">
+
+                            <Setter Property="Foreground" Value="Red" />
+
+                        </Trigger>
+
+                    </Style.Triggers>
+
+                </Style>
+
+            </Button.Style>
+
+        </Button>
+
+        <!--end Button as a Link button using style-->
+
+        <Grid Margin="30,0,30,24" Height="264" VerticalAlignment="Bottom">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="252*" />
+
+                <!--   <RowDefinition Height="12*" />-->
+
+            </Grid.RowDefinitions>
+
+            <TextBlock Height="20" HorizontalAlignment="Left" Margin="67,0,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />
+
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,20,0,0" x:Name="textBlockuserName" Foreground="AntiqueWhite" VerticalAlignment="Top" Width="110" ><Run Text="User Name"/><Run Text=" "/><Run Text=":"/></TextBlock>
+
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,48,0,0" x:Name="textBlockFirstName" Foreground="AntiqueWhite" VerticalAlignment="Top" Width="110" ><Run Text="First Name"/><Run Text=" "/><Run Text=":"/></TextBlock>
+
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,76,0,0" x:Name="textBlockLastName" Foreground="AntiqueWhite" VerticalAlignment="Top" Width="110" ><Run Text="Last Name"/><Run Text=" :"/></TextBlock>
+
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,104,0,0" x:Name="textBlockPassword" Foreground="AntiqueWhite" VerticalAlignment="Top" Width="110"  ><Run Text="Password"/><Run Text=" "/><Run Text=":"/></TextBlock>
+
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,132,0,0" x:Name="textBlockConfirmPwd" Foreground="AntiqueWhite" VerticalAlignment="Top" Width="110" ><Run Text="Confirm"/><Run Text=" "/><Run Text="Password"/><Run Text=" "/><Run Text=":"/></TextBlock>
+
+
+
+
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="189,20,0,0" Name="textBoxuserName" VerticalAlignment="Top" Width="222" />
+
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="189,48,0,0" Name="textBoxFirstName" VerticalAlignment="Top" Width="222" />
+
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="189,76,0,0" Name="textBoxLastName" VerticalAlignment="Top" Width="222" />
+
+
+
+            <PasswordBox Height="23" HorizontalAlignment="Left" Margin="189,104,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="222" />
+
+            <!--For password-->
+
+            <PasswordBox Height="23" HorizontalAlignment="Left" Margin="189,132,0,0" Name="passwordBoxConfirm" VerticalAlignment="Top" Width="222" />
+
+
+
+            <Button Content="Submit" Height="23"  Background="AntiqueWhite" Foreground="Black" HorizontalAlignment="Left" Margin="155,210,0,0" Name="Submit" VerticalAlignment="Top" Width="70" Click="Submit_Click" />
+
+            <Button Content="Reset" Height="23"  Background="AntiqueWhite" Foreground="Black" HorizontalAlignment="Left" Margin="271,210,0,0" Name="button2" VerticalAlignment="Top" Width="70" Click="Reset_Click" />
+
+            <Button Content="Cancel" Height="23" Background="AntiqueWhite" Foreground="Black" HorizontalAlignment="Right" Margin="0,210,19,0" Name="button3" VerticalAlignment="Top" Width="70" Click="Cancel_Click" />
+            <Label x:Name="label" Content="Proprietary trader of Citi" Foreground="AntiqueWhite" HorizontalAlignment="Left" Margin="67,164,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.836,2.095" Width="208"/>
+            <CheckBox x:Name="checkBox" Content="" HorizontalAlignment="Left" Margin="229,170,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.255,0.438" Height="20" Width="24"/>
+            <!--<CheckBox x:Name="checkBox1" Content="NO" HorizontalAlignment="Left" Margin="335,174,0,0" VerticalAlignment="Top"/>-->
+
+        </Grid>
+
+    </Grid>
+</Window>
